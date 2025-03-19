@@ -1,0 +1,13 @@
+.list-nav li{
+    list-style: none;
+    margin-left: 16px;
+    font-size: 0.95rem;
+    color: white;
+}
+li {
+    margin-left: 9px;
+}
+
+.foom input[type=”text”]{
+    width: 900px;
+}
