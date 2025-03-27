@@ -1,0 +1,334 @@
+body {
+    font-family: Barlow, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+.list-nav li{
+    list-style: none;
+    margin-left: 16px;
+    font-size: 0.95rem;
+    color: white;
+}
+li {
+    margin-left: 9px;
+}
+
+.foom input[type=”text”]{
+    width: 900px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    min-width: 100vw;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+
+}
+.nav-list {
+    display: flex; 
+    justify-content: space-between;
+    gap: 10px;
+}
+.nav-list li {
+    list-style: none;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 100;
+   
+    
+}
+.nav-list li:hover {
+ 
+    cursor: pointer;
+    border-bottom: 2px solid #d42114;
+}
+.btnn {
+    background-color: rgba(9, 9, 9, 0.7);;
+}
+
+
+.brand {
+ padding-bottom: 0;
+ padding-top: 10px;
+ padding-right: 15px;
+ padding-left: 15px;
+   
+  
+}
+.icony {
+    background-color: #d42114;
+    color: white;
+    padding: 5px;
+    font-size: 2rem;
+}
+.foorm input{
+  padding: 8px;
+   border: 2 solid grey;
+    width: 450px;
+   
+    margin-top: 5px;
+   
+}
+.foorm input:hover {
+    border: 2 solid white;
+}
+.search {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1rem;
+    padding-bottom: 8px;
+    padding-right: 14px;
+    padding-top: 8px;
+    padding-left: 14px;
+
+}
+.menu {
+    margin-top: 1px;
+    color: rgba(0, 0, 0, 0.5); 
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+}
+.menu .trolley{
+    padding: 0;
+   margin: 0;
+    font-size: 25px;
+   
+}
+.menu .trolley-text{
+ font-size: 13px;
+ margin: 0;
+ padding: 0;
+}
+.bars {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu:hover {
+   
+    color: #d42114;
+    cursor: pointer;
+}
+.barry p:hover {
+    color: #d42114;
+}
+.barry:hover {
+   
+    color: #d42114;
+    cursor: pointer;
+}
+.btn-closs { 
+    
+}
+
+.trolley {
+    font-size: 1.3rem;
+    background-color: #d42114;
+}
+.trolley-text {
+    font-size: 0.7rem;
+}
+.bary-tex {
+    font-size: 0.78rem;
+    color: rgba(0, 0, 0, 0.7);
+  
+  
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+  
+    
+    
+    
+}
+.bar p:hover {
+    color: #d42114;
+} 
+.nav-bar:hover {
+   
+    color: #d42114;
+}
+.nav-bar {
+    padding: 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+   
+    border: none;
+    background-color: white;
+}
+.bar-text {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: none;
+}
+.newmenu {
+    
+}
+.listy a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+.btnn {
+    padding: 5px;
+    font-size: larger;
+    border-radius: 7px;
+    border: 0;
+    display: none;
+}
+.butty {
+    display: none;
+   
+}
+
+@media only screen and (max-width: 768px) {
+    
+   .nav-list {
+    display: none;
+   }
+   .butty {
+  display: none;
+   }
+   .closeey {
+    display: block;
+   }
+    .closey  li:hover {
+        border-bottom: 2px solid white;
+    }
+    .closey li{
+        color: aliceblue;
+        font-size: 2.5rem;
+    }
+   .closey {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 20px;
+    color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+   }
+   .btn-closs { 
+    display: block;
+    position: fixed;
+    top: 8px;
+    right: 10px;
+    background-color: aliceblue;
+   }
+    
+    .foorm input{
+        width: 250px;
+    }
+    
+  }
+
+
+.van {
+    font-size: 2rem;
+    padding-top: 0;
+    margin-right: 10px;
+    margin-top: 0;
+
+}
+.items {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+   padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.items p {
+    font-size: 1.2rem;
+    padding-top: 23px;
+    margin-bottom: 20px;
+    
+}
+
+.image img {
+    
+    padding: 20px;
+   width: 100%;
+    height: 375px;
+    
+}
+.nav-list a {
+    text-decoration: none;
+    
+
+}
+
+.moby p {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 100;
+  
+   
+
+}
+.butt {
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+   
+}
+.ally {
+    display: flex;
+    flex-direction: column;
+
+}
+.listy span{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.5);
+}
+.listy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 0.3px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    
+}
+.btn-clossy {
+    padding: 0px;
+    font-size: 1.5rem;
+    color: black;
+   
+    border: none;
+    position: fixed;
+    top: 98px;
+    right: 10px;
+    background-color: white;
+
+}
+.moby h3 {
+   font-size: 1.6rem;
+   padding: 15px 5px;
+    font-weight: 400;
+    
+}
+.firshh {
+    border-top: 1px solid  rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.3);
+   
+   
+ 
+
+}
+.firsh {
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.3);
+
+}

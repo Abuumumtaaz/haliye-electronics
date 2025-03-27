@@ -1,10 +1,23 @@
-import React from 'react'
+
 import { TfiMenu } from 'react-icons/tfi';
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { Link } from 'react-router-dom';
+import { TiTimesOutline } from "react-icons/ti";
+import { TiThMenu } from "react-icons/ti";
+import { useState } from 'react';
+import { FaChevronCircleRight } from "react-icons/fa";
+
+
 
 const Newnav = () => {
+
+      const [isopen, setIsopen] = useState(false);
+      const togglee = () => {
+          setIsopen((open) => !open);
+      }
   return (
+    <>
     <div className='container '>
         <div className="brand">
         <svg class="icony " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="41" height="38" fill="none" viewBox="0 0 24 24">
@@ -17,18 +30,92 @@ const Newnav = () => {
             <button className='search'><CiSearch /></button>
             
         </from>
-        <ul className="nav-list">
-            <li>Home</li>
-            <li>Action</li>
-            <li>Servises</li>
+        <ul  className={`nav-list ${isopen ? 'closeyy' : ''}`}>
+            
+            <Link to='/'><li>Home</li></Link>
+            <Link to='/Action'><li>Action</li></Link>
+            <Link to='/Services'><li>Servises</li></Link>
+            <button className={`btnn ${isopen ? 'btn-closs' : ''}`} onClick={togglee} ><TiTimesOutline /></button>
         </ul>
+       
+        
+   
+        <div className='bars'>
         <div className="menu">
              <span className='trolley'><div>
               <MdOutlineShoppingCart />
               </div></span>
               <p className='trolley-text'>Trolley</p>
+             
+        </div>
+        <div className="barry">
+        <button className='nav-bar close ' onClick={togglee}><TiThMenu /></button>
+        <p className='bary-tex'>Shop</p>
+
+        </div>
+        
         </div>
     </div>
+    <div className={`butty ${isopen ? 'closeey' : ''}`}>
+    <div className='butt' >
+     
+     <button  className={`btn-clossy ${isopen ? 'btn-closs' : ''}`} onClick={togglee}><TiTimesOutline /></button>
+     
+     </div>
+     <div className="moby">
+          
+          <h3 className='firshh'>Shop at Haliye</h3>
+
+         <div className="ally">
+         <div className="listy">
+
+<Link to="/Cards"><p>Shop on catagories</p></Link>
+   <span><FaChevronCircleRight /></span>
+</div>
+<div className="listy">
+
+<p>On sale products</p>
+<span><FaChevronCircleRight /></span>
+</div>
+<div className="listy">
+<p>Trending</p>
+<span><FaChevronCircleRight /></span>
+</div>
+         </div>
+         
+           
+            
+          
+          <h3 className='firsh'>Need Help?</h3>
+          <div className="ally">
+         <div className="listy">
+
+<p>Track order</p>
+
+</div>
+<div className="listy">
+
+<p>Stores</p>
+
+</div>
+<div className="listy">
+<p>Help</p>
+
+</div>
+<div className="listy">
+<p>Advice & Inspiration</p>
+
+</div>
+         </div>
+          
+         
+            
+           
+         
+        </div>
+
+    </div>
+         </>    
   )
 }
 

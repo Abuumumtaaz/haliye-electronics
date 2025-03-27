@@ -1,0 +1,55 @@
+.footerr p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 15px;
+}
+.apps {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0.7 solid rgba(0, 0, 0, 0.9);
+}
+.apps span {
+    font-size: 2rem;
+    padding: 1px 10px;
+}
+.footerr h4{
+    text-align: center;
+}
+.apy {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+  padding: 35px;
+}
+
+.img-all {
+    display: flex;
+    justify-content: center;
+   
+    border-bottom: 0.7 solid rgba(0, 0, 0, 0.5);
+
+}
+.downloads h3 {
+    text-align: center;
+    padding-top: 30px;
+}
+.imgge {
+    width: 100%;
+    
+   
+  
+}
+.imgge img {
+    width: 300px;
+    
+    padding-right: 60px;
+    
+}
+@media only screen and (max-width: 768px) {
+    .imgge {
+        width: 100%;
+    }
+    .imgge img{
+       width: 200px;
+      
+    }
+}
