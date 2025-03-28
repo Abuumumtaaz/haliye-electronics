@@ -6,6 +6,7 @@ import Nav from "./components/Nav"
 import Newnav from "./components/Newnav"
 import React, { useState } from 'react';
 import Footer from "./components/Pages/Footer"
+import { ShopContextProvider } from "./components/Shop-context"
 
 function App() {
   const {isActive, setIsActive} =  useState(false);
@@ -16,14 +17,14 @@ function App() {
   return (
     <>
     
-  
-    <Newnav />
+  <ShopContextProvider>    <Newnav />
    
     <Hero />
    
 
     <Cards />
     <Footer />
+    </ShopContextProvider>
 
   
     </>
