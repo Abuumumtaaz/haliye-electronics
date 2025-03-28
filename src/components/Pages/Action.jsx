@@ -1,8 +1,9 @@
 import React from 'react'
+import Cart from './Cart'
 
 const Action = () => {
   return (
-    <div>Action</div>
+    <div><Cart /></div>
     
   )
 }
