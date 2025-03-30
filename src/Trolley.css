@@ -1,0 +1,35 @@
+.troll-all {
+  
+ 
+  
+   
+}
+
+.troll-two {
+    display: flex;
+    padding: 20px;
+    margin: 30px;
+    background-color: white;
+   
+    border: 0.4px solid rgba(0, 0, 0, 0.4);
+    
+}
+
+.troll-two img {
+    width: 100%;
+}
+
+.troll-price p {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+}
+.whishlist {
+    display: flex;
+}
+.whishlist span {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #d42114;
+}

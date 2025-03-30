@@ -1,5 +1,5 @@
 import Cards from "./components/Cards"
-import Header from "./components/Header"
+
 
 import Hero from "./components/Hero"
 import Nav from "./components/Nav"
@@ -7,22 +7,21 @@ import Newnav from "./components/Newnav"
 import React, { useState } from 'react';
 import Footer from "./components/Pages/Footer"
 import { ShopContextProvider } from "./components/Shop-context"
+import Cart from "./components/Pages/Cart";
+import CardList from "./components/Pages/CardList";
+
 
 function App() {
-  const {isActive, setIsActive} =  useState(false);
-
-  const togglee = () => {
-    setIsActive(!isActive);
-  }
+ const {carty, setCarty} = useState([]);
   return (
     <>
     
-  <ShopContextProvider>    <Newnav />
-   
+    <ShopContextProvider>
+      <Newnav size={0} />
     <Hero />
    
 
-    <Cards />
+    <CardList />
     <Footer />
     </ShopContextProvider>
 
