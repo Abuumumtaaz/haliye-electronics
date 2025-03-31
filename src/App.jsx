@@ -9,19 +9,26 @@ import Footer from "./components/Pages/Footer"
 import { ShopContextProvider } from "./components/Shop-context"
 import Cart from "./components/Pages/Cart";
 import CardList from "./components/Pages/CardList";
+import Trolley from "./components/Pages/Trolley";
 
 
 function App() {
- const {carty, setCarty} = useState([]);
+ const {cart, setCart} = useState([]);
+ const {show, setShow} = useState(true);
+ const {warning, setWarning} = useState(false);
+
+ const handleClick = (product) => {
+  console.log(product);
+  setCart([...cart, product]);
+
+ }
   return (
     <>
     
     <ShopContextProvider>
-      <Newnav size={0} />
-    <Hero />
-   
+      <Newnav setShow={setShow} />
+     { show ?  <Trolley cart={cart} setCart={setCart}/> : <CardList  handleClick={handleClick}/> }
 
-    <CardList />
     <Footer />
     </ShopContextProvider>
 

@@ -6,17 +6,10 @@ import Newnav from '../Newnav';
 
 
 
-const getDefaultCart = () => {
-  let cart = {};
-  for (let i = 1; i < Products.length + 1; i++) {
-      cart[i] = 0;
-      
-  }
-  return  cart;
-}
 
-const Trolley = () => {
-  const [cartItem, setCartItem] = useState(getDefaultCart());
+
+const Trolley = ({ cart, setCart }) => {
+ const {price, setPrice} = useState(2);
   return (
   <>
   <div>
@@ -27,11 +20,17 @@ const Trolley = () => {
             <h1>Your Cart Items</h1>
         </div>
         <div className="trolleyitems">
-          {Products.map((product) => {
-            if (cartItem[product.id] !== 1) {
-               return <Trolleyright data={product} />
-            }
-          })}
+         {
+          cart?.map((item) => (
+            <div className="new-cart" key={item.id}>
+              <img src={item.image} alt="image" />
+              <p>{item.descriptin}</p>
+              <h2>total:£{price}</h2>
+            </div>
+            
+          ))
+         }
+        
         </div>
     </div>
   </>

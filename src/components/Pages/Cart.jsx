@@ -6,8 +6,9 @@ import Trolley from './Trolley';
 
 
 
-const Cart = ({ product}) => {
-   const { id, image, name, description, price } = product;
+const Cart = ({ products, handleClick }) => {
+   
+   const { id, image, name, description, price } = products;
     
      
   return (
@@ -33,7 +34,7 @@ const Cart = ({ product}) => {
                     <p>
                         <span>£{price}</span>
                     </p>
-                    <button >Add to cart</button>
+                    <button onClick={() => handleClick(products)}>Add to cart</button>
                   </div>
                     </div>
              </div>
