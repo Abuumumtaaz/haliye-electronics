@@ -1,8 +1,12 @@
 import React from 'react';
 import { FaRegHeart } from "react-icons/fa";
 
-const Cart = ({ cart }) => {
-  return (
+const Cart = ({ cart, setCart }) => {
+
+    const removeProduct = (id) => {
+        setCart(cart.filter(product => product.id !== id));
+      };
+       return (
     <div>
          <h2>Cart</h2>
       <ul>
@@ -22,6 +26,7 @@ const Cart = ({ cart }) => {
                    <span><FaRegHeart /></span>
                    <p>Add to whishlist</p>
                    </div>
+                   <button className="btn-danger" onClick={() => removeProduct(item.id)}>Remove </button>
                   </div>
                  <div className="troll-price">
                  <p>£{item.price}.00</p>
