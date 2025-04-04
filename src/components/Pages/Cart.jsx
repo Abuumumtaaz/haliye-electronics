@@ -1,49 +1,38 @@
-import React, { useContext, useState } from 'react'
-import { Products } from '../../Products' ;
-import { ShopContext } from '../Shop-context';
-import { FaStar } from "react-icons/fa";
-import Trolley from './Trolley';
+import React from 'react';
+import { FaRegHeart } from "react-icons/fa";
 
-
-
-const Cart = ({ products, handleClick }) => {
-   
-   const { id, image, name, description, price } = products;
-    
-     
+const Cart = ({ cart }) => {
   return (
-    <>    <div>
-      
-        <div className="products">
-           
-                <div className='first' key={id}>
-                    <div className="second">
-
-                  <div>
-                  <img src={image} alt="" />
-                  <h3 >{description}</h3>  
+    <div>
+         <h2>Cart</h2>
+      <ul>
+        {cart.length === 0 ? (
+          <p>Your cart is empty.</p>
+        ) : (
+           cart.map((item) => (
+                  <div className='troll-all' key={item.id}>
+                  <div className='troll-two'>
+                  <div className="troll-image">
+                  <img src={item.image} alt="dfds" />
                   </div>
-                  <div>
-                    <span className='star'><FaStar /></span>
-                    <span className='star'><FaStar /></span>
-                    <span className='star'><FaStar /></span>
-                    <span className='star'><FaStar /></span>
-                    <span className='star'><FaStar /></span>
-                    <span className='number'>(790)</span>
-                    
-                    <p>
-                        <span>£{price}</span>
-                    </p>
-                    <button onClick={() => handleClick(products)}>Add to cart</button>
+                  <div className="troll-description">
+                    <h4>{item.description}</h4>
+                    <p>456/5073</p>
+                   <div className="whishlist">
+                   <span><FaRegHeart /></span>
+                   <p>Add to whishlist</p>
+                   </div>
                   </div>
-                    </div>
-             </div>
-            
-        </div>
+                 <div className="troll-price">
+                 <p>£{item.price}.00</p>
+                 </div>
+                  
+                  </div>
+                  </div>
+                ))
+        )}
+      </ul>
     </div>
-   
-    </>
-
   )
 }
 

@@ -188,6 +188,15 @@ li {
     display: none;
    
 }
+.size {
+    position: absolute;
+    top: 11px;
+    background-color: #d42114;
+    color: aliceblue;
+    padding: 2px 6px;
+    font-size: 0.6rem;
+    border-radius: 60%;
+}
 
 @media only screen and (max-width: 768px) {
     

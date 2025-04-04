@@ -9,19 +9,16 @@ import './Footer.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Action from './components/Pages/Action.jsx';
 import Services from './components/Pages/Services.jsx';
-import Cards from './components/Cards.jsx';
-import Trolley from './components/Pages/Trolley.jsx';
+
 import Home from './components/Home.jsx';
+import Cart from './components/Pages/Cart.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },
   { path: '/Home', element: <Home /> },
-  { path: '/Action', element: <Action /> },
-  { path: '/Cards', element: <Cards /> },
   { path: '/Services', element: <Services /> },
-  { path: '/Trolley', element: <Trolley />}
+  { path: '/Cart', element: <Cart />}
 ]);
 
 createRoot(document.getElementById('root')).render(

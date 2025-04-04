@@ -1,36 +1,32 @@
-import Cards from "./components/Cards"
 
-
-import Hero from "./components/Hero"
-import Nav from "./components/Nav"
-import Newnav from "./components/Newnav"
 import React, { useState } from 'react';
-import Footer from "./components/Pages/Footer"
-import { ShopContextProvider } from "./components/Shop-context"
-import Cart from "./components/Pages/Cart";
-import CardList from "./components/Pages/CardList";
-import Trolley from "./components/Pages/Trolley";
 
+
+import ShopingPage from "./components/Pages/ShopingPage";
+import Cart from './components/Pages/Cart';
+import Nav from './components/Nav';
+import Footer from './components/Pages/Footer';
 
 function App() {
- const {cart, setCart} = useState([]);
- const {show, setShow} = useState(true);
- const {warning, setWarning} = useState(false);
 
- const handleClick = (product) => {
-  console.log(product);
-  setCart([...cart, product]);
+  const [cart, setCart] = useState([]);
+  const [show, setShow ] = useState(true);
 
- }
+
   return (
     <>
     
-    <ShopContextProvider>
-      <Newnav setShow={setShow} />
-     { show ?  <Trolley cart={cart} setCart={setCart}/> : <CardList  handleClick={handleClick}/> }
 
+
+     
+   
+     <Nav setShow={setShow}  size={cart.length} />
+    
+     { show ?  <ShopingPage  cart={cart} setCart={setCart} /> : <Cart cart={cart} setCart={setCart}/>  }
+   
     <Footer />
-    </ShopContextProvider>
+   
+    
 
   
     </>
