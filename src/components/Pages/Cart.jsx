@@ -8,7 +8,7 @@ const Cart = ({ cart, setCart }) => {
       };
        return (
     <div>
-         <h2>Cart</h2>
+         <h2>Your Basket</h2>
       <ul>
         {cart.length === 0 ? (
           <p>Your cart is empty.</p>
@@ -26,7 +26,8 @@ const Cart = ({ cart, setCart }) => {
                    <span><FaRegHeart /></span>
                    <p>Add to whishlist</p>
                    </div>
-                   <button className="btn-danger" onClick={() => removeProduct(item.id)}>Remove </button>
+                   <a href="/"onClick={() => removeProduct(item.id)}>Remove item </a>
+
                   </div>
                  <div className="troll-price">
                  <p>£{item.price}.00</p>

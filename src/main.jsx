@@ -9,10 +9,10 @@ import './Footer.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Services from './components/Pages/Services.jsx';
 
 import Home from './components/Home.jsx';
 import Cart from './components/Pages/Cart.jsx';
+import Services from './components/Services.jsx';
 
 const router = createBrowserRouter([
   { path: '/', element: <App /> },

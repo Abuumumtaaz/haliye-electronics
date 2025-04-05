@@ -5,7 +5,8 @@ import React, { useState } from 'react';
 import ShopingPage from "./components/Pages/ShopingPage";
 import Cart from './components/Pages/Cart';
 import Nav from './components/Nav';
-import Footer from './components/Pages/Footer';
+import Footer from './components/Footer'
+
 
 function App() {
 

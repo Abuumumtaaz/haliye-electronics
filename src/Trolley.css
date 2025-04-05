@@ -1,14 +1,24 @@
-.troll-all {
-  
+.all-cart {
+    display: flex;
+    flex-direction: row;
  
   
    
 }
-
+.carty {
+    width: 70%;
+}
+.sidy {
+    background-color: aqua;
+    width: 30%;
+}
+.side-menu {
+    background-color: aqua;
+}
 .troll-two {
     display: flex;
-    padding: 20px;
-    margin: 30px;
+    padding: 8px;
+    margin: 10px 5px;
     background-color: white;
    
     border: 0.4px solid rgba(0, 0, 0, 0.4);
@@ -16,7 +26,8 @@
 }
 
 .troll-two img {
-    width: 100%;
+    width: 80%;
+    height: 150px;
 }
 
 .troll-price p {
@@ -32,4 +43,7 @@
     font-size: 1rem;
     margin-right: 10px;
     color: #d42114;
+}
+.troll-description a{
+    color: black;
 }
