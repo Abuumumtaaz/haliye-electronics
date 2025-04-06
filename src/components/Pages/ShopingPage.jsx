@@ -9,7 +9,7 @@ const ShopingPage = ({ cart, setCart }) => {
   const [ warning, setWarning] = useState(false);
  
     const addToCart = (product) => {
-
+      console.log(product);
       let isPresent = false;
 
       cart.forEach((item) => {
@@ -25,6 +25,7 @@ const ShopingPage = ({ cart, setCart }) => {
         return;
       }
        
+     
         setCart((prevCart) => [...prevCart, product]);
       };
     

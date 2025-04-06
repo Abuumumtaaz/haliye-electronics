@@ -4,9 +4,10 @@ import { FaRegHeart } from "react-icons/fa";
 const Cart = ({ cart, setCart }) => {
 
     const removeProduct = (id) => {
+      console.log(id); 
         setCart(cart.filter(product => product.id !== id));
       };
-       return (
+     return (
     <div>
          <h2>Your Basket</h2>
       <ul>
