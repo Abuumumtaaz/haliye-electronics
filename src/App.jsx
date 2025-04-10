@@ -6,6 +6,7 @@ import ShopingPage from "./components/Pages/ShopingPage";
 import Cart from './components/Pages/Cart';
 import Nav from './components/Nav';
 import Footer from './components/Footer'
+import Hero from './components/Hero';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
      
    
      <Nav setShow={setShow}  size={cart.length} />
+   
     
      { show ?  <ShopingPage  cart={cart} setCart={setCart} /> : <Cart cart={cart} setCart={setCart}/>  }
    

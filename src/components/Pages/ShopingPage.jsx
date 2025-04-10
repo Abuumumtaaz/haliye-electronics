@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Products } from '../../Products';
 import { FaStar } from "react-icons/fa";
 import Hero from '../Hero';
+import Nav from '../Nav';
 
 
 
@@ -31,7 +32,7 @@ const ShopingPage = ({ cart, setCart }) => {
     
   return (
     <div className='Container'>
-         <Hero />
+         <Nav />
         <h1>Shop Our latest products</h1>
       { warning &&   <div className=" warning">You already but in the cart</div>
      }
