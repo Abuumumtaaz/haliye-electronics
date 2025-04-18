@@ -1,7 +1,10 @@
-import React from 'react';
+import { useContext, React } from 'react';
 import { FaRegHeart } from "react-icons/fa";
+import { MyContext } from '../../App';
+import { useShare } from './Context';
 
-const Cart = ({ cart, setCart }) => {
+const Cart = () => {
+      const { cart, setCart } = useShare();
 
     const removeProduct = (id) => {
     

@@ -7,6 +7,7 @@ import './Nav.css';
 import './Hero.css';
 import './Trolley.css';
 import './Footer.css';
+import './Telly.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';

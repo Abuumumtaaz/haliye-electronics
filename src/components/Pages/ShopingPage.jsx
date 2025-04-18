@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Products } from '../../Products';
 import { FaStar } from "react-icons/fa";
 import Hero from '../Hero';
 import Nav from '../Nav';
+import Cart from './Cart';
+import { MyContext } from '../../App';
+import { useShare } from './Context';
 
 
 
-const ShopingPage = ({ cart, setCart }) => {
+const ShopingPage = () => {
   const [ warning, setWarning] = useState(false);
+  const { cart, setCart } = useShare();
  
     const addToCart = (product) => {
       console.log(product);
@@ -31,11 +35,18 @@ const ShopingPage = ({ cart, setCart }) => {
       };
     
   return (
+    <>
+     <Nav />
     <div className='Container'>
-         <Nav />
+        
         <h1>Shop Our latest products</h1>
       { warning &&   <div className=" warning">You already but in the cart</div>
      }
+      <div className="firsty-container">
+    <div className="sidyy">
+<p>Bismilaah</p>
+    </div>
+    <div className="minyy">
     <div className='cards'>
         {Products.map((product) => (
           
@@ -43,7 +54,8 @@ const ShopingPage = ({ cart, setCart }) => {
          
             <div>
             <img src={product.image} alt="Alxdulilaah " />
-          
+           
+          <p className='description'>{product.description}</p>
           
           <div className='price-area'>
                <span className='star'><FaStar /></span>
@@ -60,11 +72,16 @@ const ShopingPage = ({ cart, setCart }) => {
              </div>
               
 </div>
-            </div>
+</div>
+
+          
             
         ))}
       </div>
-    </div>
+      </div>
+    </div>  </div>
+  
+    </>
   )
 }
 

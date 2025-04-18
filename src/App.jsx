@@ -1,35 +1,40 @@
 
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 
 
 import ShopingPage from "./components/Pages/ShopingPage";
 import Cart from './components/Pages/Cart';
 import Nav from './components/Nav';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Cards from './components/Cards';
 import Hero from './components/Hero';
+import Context from './components/Pages/Context';
 
 
+export const MyContext = createContext([]);
 function App() {
+const [cart, setCart] = useState([]);
+ 
 
-  const [cart, setCart] = useState([]);
-  const [show, setShow ] = useState(true);
-
+const contextValue = { cart, setCart };
 
   return (
     <>
     
 
 
-     
+     <Context> 
    
-     <Nav setShow={setShow}  size={cart.length} />
-   
+   <Nav  />
+   <Hero />
+   <Cards />
+   <ShopingPage />
+    <Cart />
     
-     { show ?  <ShopingPage  cart={cart} setCart={setCart} /> : <Cart cart={cart} setCart={setCart}/>  }
    
     <Footer />
    
-    
+    </Context>
 
   
     </>

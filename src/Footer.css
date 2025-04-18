@@ -21,27 +21,33 @@
   padding: 35px;
 }
 
-.img-all {
+.img-ally {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-   
-    border-bottom: 0.7 solid rgba(0, 0, 0, 0.5);
+    background-color: brown;
+    border: 0.7 solid rgba(0, 0, 0, 0.5);
 
 }
 .downloads h3 {
     text-align: center;
     padding-top: 30px;
 }
-.imgge {
-    width: 100%;
+.imgone {
+    width: 25%;
+   flex: 25%;
     
    
   
 }
+.imgtwo {
+ flex: 25%;
+ width: 25%;
+}
 .imgge img {
-    width: 300px;
+    width: 100%;
     
-    padding-right: 60px;
+
     
 }
 @media only screen and (max-width: 768px) {

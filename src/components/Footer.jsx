@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <div className="downloads">
               <h3>Download our app</h3>
-              <div className="img-all">
+              <div className="img-ally">
               <div className="imgge imgone">
               <img src="./apple2.png" alt="hshk" />
               

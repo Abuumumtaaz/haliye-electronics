@@ -1,17 +1,17 @@
-
-
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { TiTimesOutline } from "react-icons/ti";
 import { TiThMenu } from "react-icons/ti";
-import { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaChevronCircleRight } from "react-icons/fa";
+import { MyContext } from "../App";
 
 
 
-const Nav = ({ size, setShow }) => {
 
+const Nav = () => {
+    const { cart } = useContext(MyContext);
       const [isopen, setIsopen] = useState(false);
       const togglee = () => {
           setIsopen((open) => !open);
@@ -45,7 +45,7 @@ const Nav = ({ size, setShow }) => {
         <div className="menu">
             <span className='trolley' onClick={()=>setShow(false)}><div>
               <MdOutlineShoppingCart />
-              <span className="size">{size}</span>
+              <span className="size">0</span>
               </div></span>
               <p className='trolley-text'>Trolley</p>
              
