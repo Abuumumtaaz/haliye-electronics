@@ -29,7 +29,7 @@ const contextValue = { cart, setCart };
    <Hero />
    <Cards />
    <ShopingPage />
-    <Cart />
+ 
     
    
     <Footer />
